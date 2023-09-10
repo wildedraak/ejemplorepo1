@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Materium>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Materia
+                </th>
+                <th>
+                    Docente
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var materia_docente in Model)
+            {
+                <tr>
+                    <td>@materia_docente.MateriaNombre</td>
+                    <td>@materia_docente.MateriaDocentes.FirstOrDefault()?.Docente.DocenteNombre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+

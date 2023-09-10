@@ -1,0 +1,26 @@
+﻿
+
+<div class="text-center">
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Materia
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var m in ViewData["MateriasInscritas"] as List<MateriaNombreViewModel>)
+            {
+                <tr>
+                    <td>@m.MateriaNombre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
